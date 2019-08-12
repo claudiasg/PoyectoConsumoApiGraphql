@@ -1,0 +1,26 @@
+Sequelize
+  Models
+  Associations
+  Migrations
+
+Graphql
+  Schemas
+  Scalars
+  Resolvers
+  Mutations
+  Login
+  SignIn
+  Authentication
+
+
+.
+├── package.json
+├── src
+├   ├── schema
+├   ├   ├── travels
+├   ├   ├   ├── Travel.js
+├   ├   ├   ├── data.js
+├   ├   ├   ├── index.js
+├   ├   ├   ├── resolvers.js
+├   ├   ├   └── typeDef.js
+└── index.js
