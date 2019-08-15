@@ -10,7 +10,22 @@ const Mutations = {
 				address
 			});
 			return newPerson;
-		})
+		}),
+		updatePerson: isLogged(async (_, args) => {
+		const { id, name, address } = args;
+		const person=await Person.findByPk(id);
+		const updatedPerson = await person.update({
+			name,
+			address
+		});
+		return updatedPerson;
+	}),
+	deletePerson:isLogged(async (_, args) => {
+	const { id } = args;
+	const person=await Person.findByPk(id);
+	return await person.destroy();
+
+	})
 	}
 };
 
