@@ -12,7 +12,23 @@ const Mutation = {
 				days
 			});
 			return newTravel;
-		})
+		}),
+		updateTravel: isLogged(async (_, args) => {
+		const { id, description, personId,days } = args;
+		const travel=await Travel.findByPk(id);
+		const updatedTravel = await travel.update({
+			description,
+			personId,
+			days
+		});
+		return updatedTravel;
+	}),
+	deleteTravel:isLogged(async (_, args) => {
+	const { id } = args;
+	const travel=await Travel.findByPk(id);
+	return await travel.destroy();
+
+	})
 	}
 };
 

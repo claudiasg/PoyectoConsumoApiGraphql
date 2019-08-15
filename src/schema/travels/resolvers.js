@@ -12,15 +12,9 @@ const resolvers = {
 		}),
 		travel: isLogged(async (parent, { id }) => {
 			const travel = await Travel.findByPk(id);
-			return JSON.stringify(travel);
+			return travel;
 		}),
-		travelByName: isLogged(async (parent, { description }) => {
-			return await Person.findAll({
-				where: {
-					[Op.like]: description
-				}
-			});
-		})
+
 	},
 	Travel: {
 		async person(parent, args) {
