@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "claudia",
-    "password": 12345,
+    "password": "12345",
     "database": "clau_graphql",
-    "host": "127.0.0.1",
+    "host": "200.107.241.6",
     "dialect": "mysql"
   },
   "test": {
     "username": "claudia",
-    "password": 12345,
+    "password": "12345",
     "database": "clau_graphql",
-    "host": "127.0.0.1",
+    "host": "200.107.241.6",
     "dialect": "mysql"
   },
   "production": {
     "username": "claudia",
-    "password": 12345,
+    "password": "12345",
     "database": "clau_graphql",
-    "host": "127.0.0.1",
+    "host": "200.107.241.6",
     "dialect": "mysql"
   }
 }

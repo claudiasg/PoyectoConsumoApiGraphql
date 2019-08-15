@@ -21,7 +21,7 @@ const UsersMutation = {
 
 		async login(_, { username, password }) {
 			const user = await User.findOne({ where: { username } });
-			
+
 			if(!user) throw new Error("Incorrect user or password");
 			const valid = await bcrypt.compare(password, user.password);
 

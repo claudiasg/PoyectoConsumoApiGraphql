@@ -17,9 +17,14 @@ const server = new ApolloServer({
 	}
 });
 
-server.listen().then(({ url }) => {
+/*server.listen().then(({ url }) => {
 	console.log(`🚀  Server ready at ${url}`);
+});*/
+const PORT=3666;
+server.listen(PORT,() => {
+	console.log(`GraphQl is running on http://localhost:${PORT}`);
 });
+
 
 
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlcm5hbWUiOiJyb290IiwiaWF0IjoxNTY0NTIxMzQxLCJleHAiOjE1OTYwNzg5NDF9.a3M2zfFLM9Kiy3w8E6Fh0_yrZtKfhvkOUnfPKX7lucw
