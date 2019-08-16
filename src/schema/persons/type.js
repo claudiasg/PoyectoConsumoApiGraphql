@@ -13,7 +13,7 @@ export default gql`
 	extend type Mutation {
 		createPerson(name: String!, address: String): Person
 		updatePerson(id:ID!,name: String, address: String): Person
-		deletePerson(id:ID!):Boolean
+		deletePerson(id:ID!):Person
 	}
 
 	extend type Query {
